@@ -1,0 +1,61 @@
+# Prompt: Sistema Web de Vendas com Documento de Requisitos baseado nas ISO 29148 e ISO 25010
+
+Você é um engenheiro de requisitos de software e desenvolvedor full-stack com experiência em projetos web com Python, MySQL e front-end em HTML e CSS. Sua tarefa é produzir dois entregáveis para um Sistema Web de Vendas: um prompt de desenvolvimento em arquivo Markdown (`.md`) e um documento de requisitos em PDF e Word (`.docx`), ambos estruturados conforme as normas ISO/IEC/IEEE 29148 (engenharia de requisitos) e ISO/IEC 25010 (modelo de qualidade de produto de software).
+
+## Contexto do sistema
+
+O Sistema Web de Vendas é uma aplicação acessada pelo navegador, com as seguintes funcionalidades obrigatórias:
+
+1. Cadastrar produtos
+2. Controlar o estoque
+3. Registrar entradas de estoque
+4. Registrar vendas
+5. Incluir vários itens em uma mesma venda
+6. Atualizar o estoque automaticamente a cada venda
+7. Consultar as vendas realizadas
+8. Emitir relatórios de vendas com filtros
+9. Acompanhar indicadores em um dashboard
+10. Cadastrar clientes
+11. Tela de login
+12. Tela de venda
+
+Tecnologias obrigatórias:
+- Front-end: HTML + CSS
+- Back-end: Python
+- Banco de dados: MySQL
+
+## Parte 1: Arquivo Markdown (prompt de desenvolvimento)
+
+Gere um arquivo `.md` contendo um prompt de desenvolvimento completo, que outro agente ou desenvolvedor possa executar para construir o sistema. O arquivo deve conter:
+
+- Visão geral e objetivo do sistema
+- Escopo, com as 12 funcionalidades listadas acima e o que está fora de escopo
+- Perfis de usuário e permissões básicas (por exemplo, administrador e vendedor), derivados da tela de login
+- Requisitos funcionais, numerados (RF-01 a RF-n), cada um com critério de aceitação verificável
+- Requisitos não funcionais, organizados pelas características da ISO/IEC 25010: funcionalidade, desempenho, compatibilidade, usabilidade, confiabilidade, segurança, manutenibilidade e portabilidade
+- Regras de negócio, incluindo: a baixa de estoque deve ocorrer de forma atômica na confirmação da venda; a venda não pode ser registrada com quantidade superior ao estoque disponível; entradas de estoque aumentam o saldo; cada movimentação de estoque deve ser rastreável
+- Modelo de dados sugerido no MySQL (tabelas de produtos, clientes, vendas, itens de venda, movimentações de estoque e usuários), com chaves e relacionamentos
+- Estrutura de pastas sugerida para o back-end Python e para o front-end em HTML + CSS
+- Requisitos de segurança: senhas armazenadas com hash, proteção contra injeção SQL por uso de consultas parametrizadas, controle de sessão
+- Critérios de aceitação gerais e lista de testes sugeridos (unitários, de integração e de aceitação)
+
+Escreva o conteúdo em português, com linguagem clara, objetiva e sem ambiguidade. Use "deve" para requisitos obrigatórios.
+
+## Parte 2: Documento de requisitos (PDF e Word)
+
+Gere um documento de requisitos formal em PDF e em Word (`.docx`) com o mesmo conteúdo, organizado conforme a ISO/IEC/IEEE 29148:
+
+1. Introdução: propósito, escopo, definições, siglas e referências normativas (ISO/IEC/IEEE 29148 e ISO/IEC 25010)
+2. Descrição geral: perspectiva do produto, funções do produto, perfis de usuário, restrições e premissas
+3. Requisitos específicos: requisitos funcionais (RF-01 a RF-n), requisitos não funcionais por característica da ISO/IEC 25010, requisitos de interface (telas de login e de venda, e demais telas), requisitos de dados e requisitos de segurança
+4. Critérios de aceitação e rastreabilidade: matriz que relacione cada requisito à funcionalidade da lista de escopo e ao caso de teste correspondente
+5. Apêndices: glossário e modelo de dados
+
+Cada requisito deve ser identificado, único, verificável, não ambíguo e rastreável, conforme a ISO/IEC/IEEE 29148. O documento deve ser entregue com a mesma numeração nos dois formatos, PDF e Word, para que sejam equivalentes.
+
+## Instruções de entrega
+
+- Entregue o arquivo Markdown e os documentos de requisitos em PDF e Word.
+- Mantenha a numeração dos requisitos idêntica entre o Markdown e o documento de requisitos.
+- Se algum detalhe não for especificado pelo cliente, adote a melhor prática de mercado e registre a premissa explicitamente na seção de premissas.
+- Não omita nenhuma das 12 funcionalidades listadas no escopo.
